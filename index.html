@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/817f93a7d5.js" crossorigin="anonymous"></script>
+    <title>3D Button Effect</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        .wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:40px;
+        }
+
+        a {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 210px;
+            height: 80px;
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transform: rotate(-30deg) skewX(25deg) translate(0, 0);
+            box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+            font-size: 1.2em;
+            transition: 0.5s;
+        }
+
+        a:hover{
+            transform: rotate(-30deg) skewX(25deg) translate(40px,-40px);
+            box-shadow: -40px 40px 10px rgba(0, 0, 0, 0.5);
+            background-color: blueviolet;
+            color: #fff;
+        }
+
+        a:hover:before, a:hover:after{
+            background-color: rgb(106, 27, 180);
+        }
+
+        a i {
+            margin-right: 20px;
+        }
+
+        a:before {
+            content: "";
+            width: 20px;
+            height: 100%;
+            left: -20px;
+            top: 10px;
+            position: absolute;
+            transform: rotate(0deg) skewY(-45deg);
+            background-color: #bdb7b7;
+        }
+
+        a:after {
+            content: "";
+            width: 100%;
+            height: 20px;
+            left: -11px;
+            bottom: -20px;
+            position: absolute;
+            transform: rotate(0deg) skewX(-45deg);
+            background-color: #bdb7b7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="#">
+            <i class="fa fa-comments"></i>Comment
+        </a>
+
+        <a href="#">
+            <i class="fa fa-heart"></i>Like
+        </a>
+
+        <a href="#">
+            <i class="fa fa-share"></i>Share
+        </a>
+    </div>
+</body>
+
+</html>
